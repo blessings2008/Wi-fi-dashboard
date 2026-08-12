@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>WiFiOS — Network Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span></span><span></span><span></span></div>
+        <div><strong>WiFiOS</strong><small>Network command center</small></div>
+      </div>
+      <div class="network-pill"><span class="status-dot"></span><div><b>Home Network</b><small>Online · 192.168.1.1</small></div></div>
+      <nav>
+        <p class="nav-label">MONITOR</p>
+        <button class="nav-item active" data-view="overview"><span>⌂</span> Overview</button>
+        <button class="nav-item" data-view="devices"><span>◉</span> Devices <em>7</em></button>
+        <button class="nav-item" data-view="traffic"><span>⌁</span> Traffic</button>
+        <button class="nav-item" data-view="alerts"><span>!</span> Alerts <em class="danger">2</em></button>
+        <p class="nav-label">NETWORK</p>
+        <button class="nav-item" data-view="security"><span>◇</span> Security</button>
+        <button class="nav-item" data-view="wifi"><span>◒</span> WiFi</button>
+        <button class="nav-item" data-view="activity"><span>◷</span> Activity</button>
+        <button class="nav-item" data-view="router"><span>⚙</span> Router</button>
+      </nav>
+      <div class="sidebar-bottom"><button class="assistant-mini" data-view="assistant"><span>✦</span><div><b>Network Assistant</b><small>Ask about your network</small></div></button></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu">☰</button>
+        <div><p class="eyebrow">WEDNESDAY · AUGUST 12, 2026</p><h1 id="pageTitle">Network Overview</h1></div>
+        <div class="top-actions"><button class="icon-btn" title="Refresh" id="refreshBtn">↻</button><button class="icon-btn" title="Notifications">♢<i></i></button><div class="avatar">B</div></div>
+      </header>
+
+      <section class="content" id="content"></section>
+    </main>
+  </div>
+  <div class="toast" id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
